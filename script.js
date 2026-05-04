@@ -1,8 +1,6 @@
 'use strict';
 
-// ===========================
 // Header scroll behavior
-// ===========================
 const header = document.getElementById('header');
 
 window.addEventListener('scroll', () => {
@@ -13,9 +11,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ===========================
 // Hamburger menu
-// ===========================
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
@@ -31,9 +27,7 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// ===========================
-// Scroll animations (Intersection Observer)
-// ===========================
+// Scroll-in animations
 const animatedElements = document.querySelectorAll('[data-aos]');
 
 const observer = new IntersectionObserver(
@@ -52,27 +46,7 @@ const observer = new IntersectionObserver(
 
 animatedElements.forEach(el => observer.observe(el));
 
-// ===========================
-// Seasons tab switcher
-// ===========================
-const seasonTabs = document.querySelectorAll('.season-tab');
-const seasonPanels = document.querySelectorAll('.season-panel');
-
-seasonTabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const season = tab.dataset.season;
-
-    seasonTabs.forEach(t => t.classList.remove('active'));
-    seasonPanels.forEach(p => p.classList.remove('active'));
-
-    tab.classList.add('active');
-    document.getElementById(season).classList.add('active');
-  });
-});
-
-// ===========================
-// Back to top button
-// ===========================
+// Back to top
 const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
@@ -87,22 +61,21 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ===========================
 // Contact form
-// ===========================
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const btn = contactForm.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
   btn.textContent = '送信中...';
   btn.disabled = true;
 
   setTimeout(() => {
-    showToast('お問い合わせを受け付けました。24時間以内にご返信します。');
+    showToast('お問い合わせを受け付けました。営業日2日以内にご返信します。');
     contactForm.reset();
-    btn.textContent = '送信する';
+    btn.textContent = originalText;
     btn.disabled = false;
   }, 1200);
 });
@@ -122,12 +95,12 @@ function showToast(message) {
   }, 4000);
 }
 
-// ===========================
-// Smooth scroll for anchor links
-// ===========================
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
-    const target = document.querySelector(anchor.getAttribute('href'));
+    const href = anchor.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       const offset = 80;

@@ -3,26 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>京都旅行お手伝い | Kyoto Travel Guide</title>
+  <title>EVOLX | Golf Wear & Accessories</title>
+  <meta name="description" content="EVOLX(エボルクス) - シンプルで上質なゴルフウェアと小物。プレーヤーを進化させる、洗練されたゴルフライフスタイルブランド。" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- ナビゲーション -->
   <header class="header" id="header">
-    <nav class="nav">
-      <div class="nav__logo">
-        <span class="nav__logo-kanji">京旅</span>
-        <span class="nav__logo-text">Kyoto Travel</span>
-      </div>
+    <nav class="nav container">
+      <a href="#" class="logo" aria-label="EVOLX ホーム">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 12 L28 28 M28 12 L12 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo__text">EVOLX</span>
+      </a>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#about">旅のご案内</a></li>
-        <li><a href="#spots">おすすめスポット</a></li>
-        <li><a href="#seasons">季節の魅力</a></li>
-        <li><a href="#food">グルメ</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#wear">Wear</a></li>
+        <li><a href="#accessories">Accessories</a></li>
+        <li><a href="#lookbook">Lookbook</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="nav__hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
@@ -30,21 +35,20 @@
     </nav>
   </header>
 
-  <!-- ヒーローセクション -->
+  <!-- ヒーロー -->
   <section class="hero">
-    <div class="hero__bg">
-      <div class="hero__overlay"></div>
-    </div>
-    <div class="hero__content">
-      <p class="hero__subtitle">千年の都で、忘れられない旅を</p>
-      <h1 class="hero__title">京都旅行<br /><span>お手伝いします</span></h1>
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <p class="hero__subtitle">GOLF WEAR &amp; ACCESSORIES</p>
+      <h1 class="hero__title">Evolve your<br /><span>golf style.</span></h1>
       <p class="hero__desc">
-        古都京都の文化・歴史・自然をともに巡る、<br />
-        あなただけの特別な旅をプランニングします。
+        シンプルで、上質に。<br />
+        プレーヤーを次のステージへ導くゴルフウェアと小物。
       </p>
       <div class="hero__actions">
-        <a href="#spots" class="btn btn--primary">スポットを見る</a>
-        <a href="#contact" class="btn btn--outline">相談する</a>
+        <a href="#wear" class="btn btn--primary">コレクションを見る</a>
+        <a href="#about" class="btn btn--outline">ブランドについて</a>
       </div>
     </div>
     <div class="hero__scroll">
@@ -53,308 +57,254 @@
     </div>
   </section>
 
-  <!-- ご案内セクション -->
+  <!-- About -->
   <section class="about" id="about">
     <div class="container">
       <div class="section-header">
         <span class="section-label">About</span>
-        <h2 class="section-title">旅のご案内</h2>
+        <h2 class="section-title">Brand Concept</h2>
         <p class="section-desc">
-          京都在住のスタッフが、観光地から隠れた名所まで<br />
-          あなたの旅を丁寧にサポートします。
+          EVOLX は「Evolve（進化する）」と「X（未知数）」を組み合わせたブランド。<br />
+          すべてのゴルファーの可能性を、シンプルなデザインで引き出します。
         </p>
       </div>
       <div class="about__cards">
         <div class="about__card" data-aos>
-          <div class="about__card-icon">🗺️</div>
-          <h3>カスタムプラン</h3>
-          <p>ご希望に合わせたオーダーメイドの旅程をご提案。一人旅から家族旅行まで対応します。</p>
+          <div class="about__card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 L14 8 L20 9 L15.5 13.5 L17 20 L12 16.5 L7 20 L8.5 13.5 L4 9 L10 8 Z"/></svg>
+          </div>
+          <h3>Quality</h3>
+          <p>素材から縫製まで、長く愛用できる確かな品質をお約束します。</p>
         </div>
         <div class="about__card" data-aos>
-          <div class="about__card-icon">🏮</div>
-          <h3>文化体験</h3>
-          <p>茶道・着物体験・座禅など、京都ならではの本物の文化体験をご手配します。</p>
+          <div class="about__card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12 H21 M12 3 V21 M5.5 5.5 L18.5 18.5 M5.5 18.5 L18.5 5.5"/></svg>
+          </div>
+          <h3>Simple</h3>
+          <p>装飾を削ぎ落とし、機能と美しさだけを残したミニマルデザイン。</p>
         </div>
         <div class="about__card" data-aos>
-          <div class="about__card-icon">🍱</div>
-          <h3>グルメ案内</h3>
-          <p>老舗料亭から地元民に愛される隠れ家カフェまで、食の京都を深くご案内します。</p>
+          <div class="about__card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20 L12 4 L20 20 Z"/><path d="M8 14 H16"/></svg>
+          </div>
+          <h3>Performance</h3>
+          <p>動きを邪魔しないストレッチ性と通気性で、ベストなプレーへ。</p>
         </div>
         <div class="about__card" data-aos>
-          <div class="about__card-icon">🚌</div>
-          <h3>交通サポート</h3>
-          <p>バス・地下鉄・タクシーを組み合わせた最適な移動ルートをわかりやすくご説明します。</p>
+          <div class="about__card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 V22 M2 12 H22"/><circle cx="12" cy="12" r="5"/></svg>
+          </div>
+          <h3>Lifestyle</h3>
+          <p>コースでも、街でも。日常に溶け込むゴルフライフスタイル。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- おすすめスポット -->
-  <section class="spots" id="spots">
-    <div class="container">
-      <div class="section-header section-header--light">
-        <span class="section-label">Spots</span>
-        <h2 class="section-title">おすすめスポット</h2>
-        <p class="section-desc">京都を代表する名所から穴場まで、厳選してご紹介します。</p>
-      </div>
-      <div class="spots__grid">
-        <div class="spot-card spot-card--large" data-aos>
-          <div class="spot-card__img spot-card__img--fushimi">
-            <div class="spot-card__badge">人気No.1</div>
-          </div>
-          <div class="spot-card__body">
-            <span class="spot-card__area">伏見区</span>
-            <h3>伏見稲荷大社</h3>
-            <p>千本鳥居が連なる神秘的な参道。朝早くに訪れると幻想的な雰囲気を体感できます。</p>
-            <div class="spot-card__meta">
-              <span>📍 伏見区深草薮之内町</span>
-              <span>⏰ 24時間参拝可</span>
-            </div>
-          </div>
-        </div>
-        <div class="spot-card" data-aos>
-          <div class="spot-card__img spot-card__img--kinkaku">
-          </div>
-          <div class="spot-card__body">
-            <span class="spot-card__area">北区</span>
-            <h3>金閣寺</h3>
-            <p>黄金に輝く舎利殿と鏡湖池の美しい風景。世界遺産に登録された京都の象徴。</p>
-            <div class="spot-card__meta">
-              <span>📍 北区金閣寺町1</span>
-              <span>⏰ 9:00〜17:00</span>
-            </div>
-          </div>
-        </div>
-        <div class="spot-card" data-aos>
-          <div class="spot-card__img spot-card__img--arashiyama">
-          </div>
-          <div class="spot-card__body">
-            <span class="spot-card__area">右京区</span>
-            <h3>嵐山・竹林</h3>
-            <p>緑の竹が空高く伸びる神秘的な小径。静寂の中に自然の力強さを感じます。</p>
-            <div class="spot-card__meta">
-              <span>📍 右京区嵯峨天龍寺</span>
-              <span>⏰ 終日開放</span>
-            </div>
-          </div>
-        </div>
-        <div class="spot-card" data-aos>
-          <div class="spot-card__img spot-card__img--kiyomizu">
-          </div>
-          <div class="spot-card__body">
-            <span class="spot-card__area">東山区</span>
-            <h3>清水寺</h3>
-            <p>「清水の舞台」から望む京都の街並みは絶景。夜間特別拝観では幻想的な世界へ。</p>
-            <div class="spot-card__meta">
-              <span>📍 東山区清水1丁目294</span>
-              <span>⏰ 6:00〜18:00</span>
-            </div>
-          </div>
-        </div>
-        <div class="spot-card" data-aos>
-          <div class="spot-card__img spot-card__img--gion">
-          </div>
-          <div class="spot-card__body">
-            <span class="spot-card__area">東山区</span>
-            <h3>祇園・花見小路</h3>
-            <p>石畳の路地に格子造りの町家が並ぶ。夕暮れ時には舞妓さんに出会えることも。</p>
-            <div class="spot-card__meta">
-              <span>📍 東山区祇園町</span>
-              <span>⏰ 終日散策可</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 季節の魅力 -->
-  <section class="seasons" id="seasons">
+  <!-- Wear -->
+  <section class="collection" id="wear">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Seasons</span>
-        <h2 class="section-title">四季の京都</h2>
-        <p class="section-desc">どの季節に訪れても、京都は違った表情で迎えてくれます。</p>
+        <span class="section-label">Collection 01</span>
+        <h2 class="section-title">Golf Wear</h2>
+        <p class="section-desc">機能性と上品さを両立した、ベーシックなゴルフウェアコレクション。</p>
       </div>
-      <div class="seasons__tabs">
-        <button class="season-tab active" data-season="spring">🌸 春</button>
-        <button class="season-tab" data-season="summer">🍃 夏</button>
-        <button class="season-tab" data-season="autumn">🍁 秋</button>
-        <button class="season-tab" data-season="winter">❄️ 冬</button>
-      </div>
-      <div class="seasons__content">
-        <div class="season-panel active" id="spring">
-          <div class="season-panel__text">
-            <h3>春の京都 <span>3月〜5月</span></h3>
-            <p>
-              哲学の道・円山公園・醍醐寺など、京都の桜は格別です。
-              ソメイヨシノが咲き誇る時期は、古都の美しさが最も輝きます。
-              祇園白川の夜桜ライトアップも必見です。
-            </p>
-            <ul>
-              <li>🌸 哲学の道の桜並木（3月下旬〜4月上旬）</li>
-              <li>🌸 醍醐寺の豊太閤花見行列（4月第2日曜）</li>
-              <li>🌸 平野神社の桜苑（3月下旬〜5月上旬）</li>
-            </ul>
+      <div class="product-grid">
+        <article class="product" data-aos>
+          <div class="product__img product__img--polo"></div>
+          <div class="product__body">
+            <span class="product__cat">TOPS</span>
+            <h3>Signature Polo</h3>
+            <p>吸汗速乾素材を使用したベーシックポロ。</p>
+            <span class="product__price">¥12,800</span>
           </div>
-          <div class="season-panel__visual season-panel__visual--spring"></div>
-        </div>
-        <div class="season-panel" id="summer">
-          <div class="season-panel__text">
-            <h3>夏の京都 <span>6月〜8月</span></h3>
-            <p>
-              祇園祭・五山の送り火など、夏の京都は伝統行事で賑わいます。
-              鴨川沿いの納涼床（床）や、貴船の川床料理も夏の醍醐味。
-            </p>
-            <ul>
-              <li>🏮 祇園祭（7月1日〜31日）</li>
-              <li>🔥 五山送り火（8月16日）</li>
-              <li>🌊 貴船の川床料理（5月〜9月）</li>
-            </ul>
+        </article>
+        <article class="product" data-aos>
+          <div class="product__img product__img--knit"></div>
+          <div class="product__body">
+            <span class="product__cat">OUTER</span>
+            <h3>Stretch Knit Jacket</h3>
+            <p>軽量ストレッチで動きを妨げないアウター。</p>
+            <span class="product__price">¥24,800</span>
           </div>
-          <div class="season-panel__visual season-panel__visual--summer"></div>
-        </div>
-        <div class="season-panel" id="autumn">
-          <div class="season-panel__text">
-            <h3>秋の京都 <span>9月〜11月</span></h3>
-            <p>
-              紅葉の名所が多い京都では、秋が最も美しい季節とも言われます。
-              東福寺・永観堂・嵐山など、錦に染まる景色は息をのむほど。
-            </p>
-            <ul>
-              <li>🍁 東福寺の通天橋（11月中旬〜下旬）</li>
-              <li>🍁 永観堂禅林寺（11月上旬〜下旬）</li>
-              <li>🍁 嵐山の紅葉（11月中旬〜下旬）</li>
-            </ul>
+        </article>
+        <article class="product" data-aos>
+          <div class="product__img product__img--pants"></div>
+          <div class="product__body">
+            <span class="product__cat">BOTTOMS</span>
+            <h3>Tech Pants</h3>
+            <p>ストレッチ性と防シワ性を備えた一本。</p>
+            <span class="product__price">¥16,800</span>
           </div>
-          <div class="season-panel__visual season-panel__visual--autumn"></div>
-        </div>
-        <div class="season-panel" id="winter">
-          <div class="season-panel__text">
-            <h3>冬の京都 <span>12月〜2月</span></h3>
-            <p>
-              雪化粧した金閣寺や竜安寺の石庭は、一年で最も幻想的な姿を見せます。
-              観光客が少ない冬は、静かに京都の深さを感じる絶好の機会です。
-            </p>
-            <ul>
-              <li>❄️ 雪の金閣寺（天候により）</li>
-              <li>🕯️ 京の冬の旅・特別公開（1月〜3月）</li>
-              <li>🎍 おけら詣り（12月31日深夜）</li>
-            </ul>
+        </article>
+        <article class="product" data-aos>
+          <div class="product__img product__img--skirt"></div>
+          <div class="product__body">
+            <span class="product__cat">LADIES</span>
+            <h3>Pleats Skirt</h3>
+            <p>動きやすさと女性らしさを両立したスカート。</p>
+            <span class="product__price">¥14,800</span>
           </div>
-          <div class="season-panel__visual season-panel__visual--winter"></div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- グルメセクション -->
-  <section class="food" id="food">
+  <!-- Accessories -->
+  <section class="collection collection--dark" id="accessories">
     <div class="container">
       <div class="section-header section-header--light">
-        <span class="section-label">Food</span>
-        <h2 class="section-title">京都グルメ</h2>
-        <p class="section-desc">千年の歴史が育んだ、奥深い京都の食文化をご堪能ください。</p>
+        <span class="section-label">Collection 02</span>
+        <h2 class="section-title">Accessories</h2>
+        <p class="section-desc">プレーをサポートする、こだわりのゴルフ小物。</p>
       </div>
-      <div class="food__grid">
-        <div class="food-item" data-aos>
-          <div class="food-item__emoji">🍵</div>
-          <h3>抹茶スイーツ</h3>
-          <p>宇治抹茶を使ったパフェ・わらび餅・抹茶ラテ。老舗の味から斬新な創作スイーツまで。</p>
-        </div>
-        <div class="food-item" data-aos>
-          <div class="food-item__emoji">🍱</div>
-          <h3>京懐石料理</h3>
-          <p>旬の素材を活かした繊細な京料理。料亭から気軽なランチコースまで幅広くご案内。</p>
-        </div>
-        <div class="food-item" data-aos>
-          <div class="food-item__emoji">🍜</div>
-          <h3>京都ラーメン</h3>
-          <p>こってり白味噌スープが特徴の京都ラーメン。新福菜館・第一旭などの老舗も必訪。</p>
-        </div>
-        <div class="food-item" data-aos>
-          <div class="food-item__emoji">🧁</div>
-          <h3>和菓子</h3>
-          <p>生八ツ橋・葛切り・羊羹など、京都の和菓子は見た目も美しく、お土産にも最適。</p>
-        </div>
-        <div class="food-item" data-aos>
-          <div class="food-item__emoji">🥢</div>
-          <h3>湯豆腐</h3>
-          <p>南禅寺周辺の老舗で味わう湯豆腐は格別。京都の豆腐文化を代表する冬の名物料理。</p>
-        </div>
-        <div class="food-item" data-aos>
-          <div class="food-item__emoji">🍡</div>
-          <h3>みたらし団子</h3>
-          <p>下鴨神社発祥のみたらし団子。甘辛のタレが香ばしく焼けた団子に絡む絶品おやつ。</p>
-        </div>
+      <div class="product-grid">
+        <article class="product product--dark" data-aos>
+          <div class="product__img product__img--cap"></div>
+          <div class="product__body">
+            <span class="product__cat">HEADWEAR</span>
+            <h3>Logo Cap</h3>
+            <p>UVカット機能付きのシグネチャーキャップ。</p>
+            <span class="product__price">¥6,800</span>
+          </div>
+        </article>
+        <article class="product product--dark" data-aos>
+          <div class="product__img product__img--glove"></div>
+          <div class="product__body">
+            <span class="product__cat">GLOVE</span>
+            <h3>Pro Leather Glove</h3>
+            <p>天然皮革のフィット感とグリップ力。</p>
+            <span class="product__price">¥3,800</span>
+          </div>
+        </article>
+        <article class="product product--dark" data-aos>
+          <div class="product__img product__img--ball"></div>
+          <div class="product__body">
+            <span class="product__cat">BALL</span>
+            <h3>Tour Ball (12P)</h3>
+            <p>飛距離と打感を両立したツアーボール。</p>
+            <span class="product__price">¥5,400</span>
+          </div>
+        </article>
+        <article class="product product--dark" data-aos>
+          <div class="product__img product__img--marker"></div>
+          <div class="product__body">
+            <span class="product__cat">MARKER</span>
+            <h3>Brass Ball Marker</h3>
+            <p>真鍮素材の重厚感あるマーカー。</p>
+            <span class="product__price">¥2,800</span>
+          </div>
+        </article>
+        <article class="product product--dark" data-aos>
+          <div class="product__img product__img--towel"></div>
+          <div class="product__body">
+            <span class="product__cat">TOWEL</span>
+            <h3>Caddie Towel</h3>
+            <p>吸水性に優れたマイクロファイバータオル。</p>
+            <span class="product__price">¥3,200</span>
+          </div>
+        </article>
+        <article class="product product--dark" data-aos>
+          <div class="product__img product__img--bag"></div>
+          <div class="product__body">
+            <span class="product__cat">BAG</span>
+            <h3>Pouch Bag</h3>
+            <p>小物をスマートに収納するポーチ。</p>
+            <span class="product__price">¥7,800</span>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- お問い合わせ -->
+  <!-- Lookbook -->
+  <section class="lookbook" id="lookbook">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Lookbook</span>
+        <h2 class="section-title">2026 Spring Collection</h2>
+        <p class="section-desc">フェアウェイから日常まで、進化するゴルフスタイル。</p>
+      </div>
+      <div class="lookbook__grid">
+        <div class="lookbook__item lookbook__item--1" data-aos></div>
+        <div class="lookbook__item lookbook__item--2" data-aos></div>
+        <div class="lookbook__item lookbook__item--3" data-aos></div>
+        <div class="lookbook__item lookbook__item--4" data-aos></div>
+      </div>
+      <p class="lookbook__credit">Photos: Unsplash (Free License)</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Contact</span>
-        <h2 class="section-title">旅のご相談</h2>
+        <h2 class="section-title">お問い合わせ</h2>
         <p class="section-desc">
-          旅行プランのご相談・ご質問はお気軽にどうぞ。<br />
-          24時間以内にご返信いたします。
+          商品・取扱店舗・卸売についてのお問い合わせはこちらから。<br />
+          営業日2日以内にご返信いたします。
         </p>
       </div>
       <div class="contact__wrapper">
         <form class="contact__form" id="contactForm">
           <div class="form-group">
             <label for="name">お名前 <span class="required">*</span></label>
-            <input type="text" id="name" name="name" placeholder="例：山田 太郎" required />
+            <input type="text" id="name" name="name" placeholder="山田 太郎" required />
           </div>
           <div class="form-group">
             <label for="email">メールアドレス <span class="required">*</span></label>
-            <input type="email" id="email" name="email" placeholder="例：taro@example.com" required />
+            <input type="email" id="email" name="email" placeholder="example@evolx.jp" required />
           </div>
           <div class="form-group">
-            <label for="travel-date">ご旅行予定日</label>
-            <input type="date" id="travel-date" name="travel-date" />
-          </div>
-          <div class="form-group">
-            <label for="people">人数</label>
-            <select id="people" name="people">
+            <label for="subject">お問い合わせ種別</label>
+            <select id="subject" name="subject">
               <option value="">選択してください</option>
-              <option value="1">1名（一人旅）</option>
-              <option value="2">2名（カップル・夫婦）</option>
-              <option value="3-5">3〜5名（グループ）</option>
-              <option value="6+">6名以上（大人数）</option>
+              <option value="product">商品について</option>
+              <option value="shop">取扱店舗について</option>
+              <option value="wholesale">卸売・取引について</option>
+              <option value="other">その他</option>
             </select>
+          </div>
+          <div class="form-group">
+            <label for="company">会社名（任意）</label>
+            <input type="text" id="company" name="company" placeholder="株式会社○○" />
           </div>
           <div class="form-group form-group--full">
             <label for="message">ご要望・ご質問 <span class="required">*</span></label>
-            <textarea id="message" name="message" rows="5" placeholder="旅行の目的・ご希望のスポット・予算など、なんでもお気軽にご相談ください。" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
           </div>
           <button type="submit" class="btn btn--primary btn--full">送信する</button>
         </form>
         <div class="contact__info">
           <div class="contact__info-item">
-            <div class="contact__info-icon">📞</div>
+            <div class="contact__info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
             <div>
-              <h4>電話でのご相談</h4>
-              <p>075-000-0000</p>
-              <small>受付時間：9:00〜18:00（年中無休）</small>
+              <h4>電話</h4>
+              <p>03-0000-0000</p>
+              <small>平日 10:00〜18:00</small>
             </div>
           </div>
           <div class="contact__info-item">
-            <div class="contact__info-icon">✉️</div>
+            <div class="contact__info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            </div>
             <div>
               <h4>メール</h4>
-              <p>info@kyoto-travel.example</p>
-              <small>24時間受付・翌営業日以内にご返信</small>
+              <p>info@evolx.example</p>
+              <small>24時間受付</small>
             </div>
           </div>
           <div class="contact__info-item">
-            <div class="contact__info-icon">📍</div>
+            <div class="contact__info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
             <div>
-              <h4>オフィス</h4>
-              <p>京都市中京区XXX</p>
-              <small>地下鉄烏丸線 四条駅より徒歩5分</small>
+              <h4>ショールーム</h4>
+              <p>東京都渋谷区XXX</p>
+              <small>JR渋谷駅より徒歩7分</small>
             </div>
           </div>
         </div>
@@ -367,35 +317,39 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <span class="nav__logo-kanji">京旅</span>
-          <span class="nav__logo-text">Kyoto Travel</span>
-          <p>千年の都、京都の旅を<br />心を込めてお手伝いします。</p>
+          <a href="#" class="logo logo--light">
+            <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+              <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 12 L28 28 M28 12 L12 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span class="logo__text">EVOLX</span>
+          </a>
+          <p>Evolve your golf style.<br />シンプルで上質な、新しいゴルフのかたち。</p>
         </div>
         <div class="footer__links">
-          <h4>サービス</h4>
+          <h4>Collection</h4>
           <ul>
-            <li><a href="#about">旅のご案内</a></li>
-            <li><a href="#spots">おすすめスポット</a></li>
-            <li><a href="#seasons">四季の京都</a></li>
-            <li><a href="#food">グルメ情報</a></li>
+            <li><a href="#wear">Golf Wear</a></li>
+            <li><a href="#accessories">Accessories</a></li>
+            <li><a href="#lookbook">Lookbook</a></li>
           </ul>
         </div>
         <div class="footer__links">
-          <h4>サポート</h4>
+          <h4>Support</h4>
           <ul>
             <li><a href="#contact">お問い合わせ</a></li>
             <li><a href="#">よくある質問</a></li>
             <li><a href="#">プライバシーポリシー</a></li>
-            <li><a href="#">利用規約</a></li>
+            <li><a href="#">特定商取引法</a></li>
           </ul>
         </div>
         <div class="footer__social">
-          <h4>フォローする</h4>
+          <h4>Follow</h4>
           <div class="footer__social-links">
             <a href="#" class="social-link" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
-            <a href="#" class="social-link" aria-label="Twitter/X">
+            <a href="#" class="social-link" aria-label="X">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
             <a href="#" class="social-link" aria-label="YouTube">
@@ -405,12 +359,11 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 京都旅行お手伝い. All rights reserved.</p>
+        <p>&copy; 2026 EVOLX. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- トップへ戻るボタン -->
   <button class="back-to-top" id="backToTop" aria-label="ページトップへ">↑</button>
 
   <script src="script.js"></script>
